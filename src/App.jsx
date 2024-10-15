@@ -35,7 +35,7 @@ const App = () => {
     if (!msg) return;
 
     const genAI = new GoogleGenerativeAI(
-      "AIzaSyDXuvFwLofS4eYE_82kMsH0hRZvaFmWAh4"
+      "YOUR_API_KEY"
     ); // Replace with your API key
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
