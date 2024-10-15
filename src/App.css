@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items horizontally */
+  justify-content: center; /* Center align items vertically */
+  width: 100%; /* Full width of the parent */
+  height: 100vh; /* Use full height to center vertically */
+}
+
+.card-custom {
+  background-color: #F7F7F7;
+}
+
+.messages {
+  height: calc(80vh - 130px); /* Adjust as needed */
+  overflow-y: auto; /* Enable scrolling */
+  padding: 10px;
+  border: 1px solid #e0e0e0; /* Lighter border for a softer look */
+  border-radius: 10px; /* Slightly larger rounded corners */
+  margin: 10px auto; /* Center horizontally by setting left/right margins to auto */
+  background-color: #f9f9f9; /* Light background for contrast */
+  display: flex;
+  flex-direction: column; /* Align messages in a column */
+  width: 100%; /* Full width to match the input area */
+  max-width: 600px; /* Optional: maximum width for larger screens */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+/* Styles for individual messages */
+.message {
+  margin-bottom: 10px; /* Space between messages */
+  padding: 10px 15px; /* Padding inside each message */
+  border-radius: 20px; /* More rounded corners for messages */
+  max-width: 100%; /* Limit message width to 100% of the container */
+  word-wrap: break-word; /* Ensure long words break to next line */
+}
+
+/* User message styling */
+.userMsg {
+  background-color: #007bff; /* ChatGPT-like blue for user messages */
+  color: white; /* White text for contrast */
+  align-self: flex-end; /* Align user messages to the right */
+}
+
+/* Response message styling */
+.responseMsg {
+  background-color: #f1f1f1; /* Light gray background for responses */
+  color: black; /* Text color */
+  align-self: flex-start; /* Align bot messages to the left */
+}
+
+/* Additional styles for message text */
+.message-text {
+  display: block; /* Ensures text occupies the full width */
+  overflow-wrap: break-word; /* Ensure text wraps properly */
+}
+
+.inputBox {
+  width: 100%; /* Full width to match messages area */
+  max-width: 600px; /* Match maximum width for consistency */
+  display: flex; /* Flex container for input */
+  align-items: center; /* Center items vertically */
+  margin: 10px 0; /* Margin for spacing */
+  background-color: white; /* Background color for input area */
+  border-radius: 30px; /* Rounded corners for input */
+  border: 1px solid #ccc; /* Light border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Input field styling */
+input {
+  padding: 10px 15px; /* Padding inside input */
+  flex: 1; /* Take remaining space */
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
+  border-radius: 30px; /* Rounded corners */
+  background-color: transparent; /* Transparent background */
+  color: black; /* Text color */
+}
+
+.send-icon {
+  color: green; /* Icon color */
+  font-size: 25px; /* Icon size */
+  margin-right: 5px; /* Spacing between icon and input */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.text-info {
+  color: gray; /* Text color for additional info */
+  font-size: 14px; /* Font size for additional info */
+  margin: 4px 0; /* Margin for spacing */
+}
+
+/* WebKit Browsers (Chrome, Safari) */
+.messages::-webkit-scrollbar {
+  width: 6px; /* Thinner scrollbar */
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0; /* Lighter color for the scrollbar thumb */
+  border-radius: 10px; /* Rounded edges for the thumb */
+}
+
+.messages::-webkit-scrollbar-track {
+  background: #f9f9f9; /* Lighter track background */
+}
+
+/* Darken the background color on hover */
+.card:hover {
+  background-color: #8a8a8a; /* Slightly darker shade */
+}
+
+/* Add this CSS to your App.css */
+@media (max-width: 450px) {
+  .inputBox {
+    width: 90%; /* Ensure the input box takes less width on mobile */
+  }
+
+  .header {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: flex-start; /* Align to the start */
+  }
+
+  .header h2 {
+    margin-bottom: 10px; /* Add margin for spacing */
+  }
+}
+
+@media (min-width: 451px) {
+  .header {
+    padding: 0 300px; /* Keep this for larger screens */
+  }
+}
